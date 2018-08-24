@@ -1,0 +1,16 @@
+/*
+ * Copyright (c) 2018, Kevin S Perrine <kperrine@gmail.com>
+ *
+ * License: MIT
+ */
+/*
+ * YOUR STYLES HERE
+ */
+.mbpButton {
+  padding: 12px;
+  max-width: 275px;
+  border-radius: 50px;
+  background-color: #26c6a5;
+  color: #fff;
+  text-decoration: none;
+}
