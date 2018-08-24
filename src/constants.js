@@ -6,5 +6,5 @@
 
 export default {
   PLUGIN_NAME: "megadraft button plugin",
-  PLUGIN_TYPE: "megadraft-button-plugin"
+  PLUGIN_TYPE: "button"
 };
