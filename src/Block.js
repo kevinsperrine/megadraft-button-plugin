@@ -89,7 +89,7 @@ export default class Block extends Component {
                 External
               </span>
               <span className="mbpHelperText">
-                If being used on a webpage, 'In-App' will open the link in the
+                If being used on the web, 'In-App' will open the link in the
                 same tab and 'External' will open a new tab.
               </span>
             </div>
