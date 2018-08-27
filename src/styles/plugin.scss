@@ -16,3 +16,15 @@
   color: #fff;
   text-decoration: none;
 }
+
+.megadraft-editor .block__input.mbpRadioInput {
+  width: auto;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.mbpHelperText {
+  font-size: 0.75em;
+  color: #999;
+  display: block;
+}

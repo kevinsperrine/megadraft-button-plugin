@@ -56,31 +56,44 @@ export default class Block extends Component {
 
         <BlockData>
           <BlockInput
-            placeholder="Text"
+            placeholder="Button Text"
             value={this.props.data.text}
             onChange={this._handleTextChange}
           />
           <BlockInput
-            placeholder="Url"
+            placeholder="Button Url"
             value={this.props.data.url}
             onChange={this._handleUrlChange}
           />
-          <input
-            name="target"
-            type="radio"
-            value="webview"
-            checked={this.props.data.target === "webview"}
-            onChange={this._handleTargetChange}
-          />{" "}
-          WebView
-          <input
-            name="target"
-            type="radio"
-            value="browser"
-            checked={this.props.data.target === "browser"}
-            onChange={this._handleTargetChange}
-          />{" "}
-          Browser
+          <div className="block__input__row">
+            <div className="block__input__wrapper">
+              <span className="block__input mbpRadioInput">
+                <span style={{ marginRight: "12px" }}>Open Link:</span>
+                <input
+                  name="target"
+                  type="radio"
+                  value="_self"
+                  checked={this.props.data.target === "_self"}
+                  onChange={this._handleTargetChange}
+                />{" "}
+                In-App
+              </span>
+              <span className="block__input mbpRadioInput">
+                <input
+                  name="target"
+                  type="radio"
+                  value="_blank"
+                  checked={this.props.data.target === "_blank"}
+                  onChange={this._handleTargetChange}
+                />{" "}
+                External
+              </span>
+              <span className="mbpHelperText">
+                If being used on a webpage, 'In-App' will open the link in the
+                same tab and 'External' will open a new tab.
+              </span>
+            </div>
+          </div>
         </BlockData>
       </CommonBlock>
     );
