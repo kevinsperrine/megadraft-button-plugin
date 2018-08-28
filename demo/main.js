@@ -7,7 +7,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { MegadraftEditor } from "megadraft";
-import { editorStateFromRaw } from "megadraft/lib/utils";
+import { editorStateFromRaw, editorStateToJSON } from "megadraft/lib/utils";
 
 import plugin from "../src/plugin";
 
@@ -20,10 +20,15 @@ class Demo extends React.Component {
       content: editorStateFromRaw(INITIAL_CONTENT)
     };
     this.onChange = ::this.onChange;
+    this.handleDumpState = ::this.handleDumpState;
   }
 
   onChange(content) {
     this.setState({ content });
+  }
+
+  handleDumpState() {
+    console.log(editorStateToJSON(this.state.content));
   }
 
   render() {
@@ -32,6 +37,7 @@ class Demo extends React.Component {
       <div className="content">
         <header>
           <h1>{pluginName} - Megadraft Plugin</h1>
+          <button onClick={this.handleDumpState}>Dump State</button>
         </header>
 
         <div className="editor">
